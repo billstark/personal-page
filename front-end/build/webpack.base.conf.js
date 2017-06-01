@@ -2,6 +2,7 @@ var path = require('path')
 var utils = require('./utils')
 var config = require('../config')
 var vueLoaderConfig = require('./vue-loader.conf')
+const webpack = require('webpack')
 
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
@@ -54,5 +55,17 @@ module.exports = {
         }
       }
     ]
-  }
+  },
+  plugins: [
+    new webpack.LoaderOptionsPlugin({
+      options: {
+        vue: {
+          loaders: {
+            scss: 'style-loader!css-loader!sass-loader',
+            stylus: 'style-loader!css-loader!stylus-loader'
+          }
+        }
+      }
+    })
+  ]
 }
