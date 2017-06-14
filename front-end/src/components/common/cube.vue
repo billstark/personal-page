@@ -16,10 +16,12 @@
 <style lang="scss" scoped>
 @keyframes spin {
   0% {
-    transform: translateZ( -25px) rotateY(-90deg) rotateZ(45deg) rotateX(45deg);
+    // transform: translateZ( -25px) rotateY(-90deg) rotateZ(45deg) rotateX(30deg);
+    transform: rotateX(-20deg) rotateY(0deg);
   }
   100% {
-    transform: translateZ( -25px) rotateY(270deg) rotateZ(45deg) rotateX(45deg);
+    // transform: translateZ( -25px) rotateY(270deg) rotateZ(45deg) rotateX(30deg);
+    transform: rotateX(-20deg) rotateY(360deg);
   }
 }
 .cube {
