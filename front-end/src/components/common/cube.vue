@@ -19,9 +19,27 @@
     // transform: translateZ( -25px) rotateY(-90deg) rotateZ(45deg) rotateX(30deg);
     transform: rotateX(-20deg) rotateY(0deg);
   }
+  50% {
+    transform: rotateX(-20deg) rotateY(180deg);
+  }
   100% {
     // transform: translateZ( -25px) rotateY(270deg) rotateZ(45deg) rotateX(30deg);
     transform: rotateX(-20deg) rotateY(360deg);
+  }
+}
+
+@keyframes breath {
+  0% {
+    border: 2px solid #888;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0);
+  }
+  50% {
+    border: 2px solid #fff;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+  }
+  100% {
+    border: 2px solid #888;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0);
   }
 }
 .cube {
@@ -51,7 +69,11 @@
       height: 99px;
       display: block;
       position: absolute;
-      border: 1px solid #000;
+      border: 2px solid #fff;
+      animation-name: breath;
+      animation-iteration-count: infinite;
+      animation-duration: 2s;
+      animation-timing-function: ease;
     }
 
     .front { transform: rotateY(   0deg ) translateZ( 50px ); }
