@@ -82,14 +82,14 @@ export default {
 
 
       #title-anim {
-        stroke-width: 2px;
+        stroke-width: 3px;
         stroke-dasharray: 1000;
         stroke-dashoffset: 1000;
         animation: dash 4s linear forwards;
       }
 
       #title-real {
-        animation: appearWithDelay 4s linear;
+        animation: appearWithDelay 3s linear;
       }
     }
   }
