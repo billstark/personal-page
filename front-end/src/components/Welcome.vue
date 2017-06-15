@@ -12,13 +12,21 @@
     >
     </vue-particles>
     <div class="content">
-      <cube class="cube"></cube>
+      <div class="main-wrapper">
+        <cube class="cube"></cube>
+        <svg class="main-title">
+          <use xlink:href="#main-title-1" id="title-anim" />
+          <use xlink:href="#main-title" id="title-real" />
+        </svg>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 import Cube from './common/Cube';
+import '../assets/img/main-title.svg';
+import '../assets/img/main-title-1.svg';
 
 export default {
   components: {
@@ -26,20 +34,25 @@ export default {
   },
   mounted() {
 
+  },
+  data() {
+    return {
+    };
   }
 }
-
-// window.onload = function() {
-//   Particles.init({
-//     selector: '#container'
-//   });
-// }
 </script>
 
 <style lang="scss" scoped>
+@import '../assets/sass/animation.scss';
+
 .container {
   width: 100%;
   height: 100%;
+  background: #303030; /* Old browsers */
+  background: -moz-radial-gradient(center, ellipse cover, #303030 0%, #000000 100%); /* FF3.6-15 */
+  background: -webkit-radial-gradient(center, ellipse cover, #303030 0%,#000000 100%); /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at center, #303030 0%,#000000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#303030', endColorstr='#000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
 .particles {
@@ -56,8 +69,29 @@ export default {
   flex-direction: column;
   justify-content: center;
 
-  .cube {
-    transform: scale(.6);
+  .main-wrapper {
+    text-align: center;
+
+    .cube {
+      transform: scale(.6);
+    }
+
+    .main-title {
+      margin-top: 20px;
+      width: 500px;
+
+
+      #title-anim {
+        stroke-width: 2px;
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
+        animation: dash 4s linear forwards;
+      }
+
+      #title-real {
+        animation: appearWithDelay 4s linear;
+      }
+    }
   }
 }
 
