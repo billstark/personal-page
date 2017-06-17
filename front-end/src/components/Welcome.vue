@@ -92,6 +92,9 @@ export default {
 
     .cube {
       transform: scale(.7);
+      opacity: 0;
+      animation: fadeIn .5s linear forwards;
+      animation-delay: 5.5s;
     }
 
     .main-title {
