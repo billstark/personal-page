@@ -16,8 +16,12 @@
       <div class="main-wrapper">
         <cube class="cube"></cube>
         <svg class="main-title">
-          <use xlink:href="#main-title-1" id="title-anim" />
+          <use xlink:href="#main-title-new" id="title-anim" />
         </svg>
+        <h3>welcome to a little world of Zhuohan</h3>
+        <div class="enter-button">
+          <div>step in</div>
+        </div>
       </div>
     </div>
   </div>
@@ -25,18 +29,21 @@
 
 <script>
 import Cube from './common/Cube';
-import '../assets/img/main-title.svg';
-import '../assets/img/main-title-1.svg';
+import Divider from './common/Divider';
+import '../assets/img/main-title-new.svg';
 
 export default {
   components: {
-    Cube
+    Cube,
+    Divider
   },
   mounted() {
 
   },
   data() {
     return {
+      dividerWidth: 400,
+      dividerAnimate: true,
     };
   }
 }
@@ -46,6 +53,7 @@ export default {
 @import '../assets/sass/animation.scss';
 
 .container {
+  font-family: 'Brandon';
   width: 100%;
   height: 100%;
 }
@@ -87,14 +95,57 @@ export default {
     }
 
     .main-title {
-      margin-top: 20px;
+      margin-top: 60px;
       width: 400px;
+      height: 60px;
 
       #title-anim {
+        fill-opacity: 0;
         stroke-width: 3px;
         stroke-dasharray: 1000;
         stroke-dashoffset: 1000;
         animation: dash 4s linear forwards;
+        animation-delay: .5s;
+      }
+    }
+  }
+
+  h3 {
+    margin-top: 0px;
+    font-size: 20px;
+    font-weight: 300;
+    color: #fff;
+    letter-spacing: 1px;
+    opacity: 0;
+    animation: floatUp ease-in .5s forwards;
+    animation-delay: 4.5s;
+  }
+
+  .enter-button {
+    margin-top: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    opacity: 0;
+    animation: floatUp ease-in .5s forwards;
+    animation-delay: 5s;
+
+    div {
+      cursor: pointer;
+      padding: 10px 30px;
+      width: 150px;
+      color: #fff;
+      font-size: 26px;
+      font-weight: 400;
+      line-height: 26px;
+      border: 2px solid #fff;
+      border-radius: 50px;
+      transition: background-color .3s ease;
+
+      &:hover {
+        background-color: #fff;
+        color: #333;
       }
     }
   }
