@@ -73,7 +73,7 @@ export default {
     text-align: center;
 
     .cube {
-      transform: scale(.6);
+      transform: scale(.7);
     }
 
     .main-title {
