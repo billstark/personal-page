@@ -11,6 +11,21 @@ export default {
 </script>
 
 <style lang="scss">
+
+@font-face {
+  font-family: 'Brandon';
+  src: url('assets/font/Brandon_thin.otf') format('truetype');
+  font-weight: thin;
+  font-style: thin;
+}
+
+@font-face {
+  font-family: 'Brandon';
+  src: url('assets/font/Brandon_reg.otf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
 body {
   margin: 0px;
 }
