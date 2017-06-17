@@ -1,5 +1,6 @@
 <template lang="html">
   <div class="container">
+    <div class="background"></div>
     <vue-particles
       class="particles"
       color="#fff"
@@ -16,7 +17,6 @@
         <cube class="cube"></cube>
         <svg class="main-title">
           <use xlink:href="#main-title-1" id="title-anim" />
-          <use xlink:href="#main-title" id="title-real" />
         </svg>
       </div>
     </div>
@@ -48,6 +48,15 @@ export default {
 .container {
   width: 100%;
   height: 100%;
+}
+
+.background {
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: -2;
   background: #303030; /* Old browsers */
   background: -moz-radial-gradient(center, ellipse cover, #303030 0%, #000000 100%); /* FF3.6-15 */
   background: -webkit-radial-gradient(center, ellipse cover, #303030 0%,#000000 100%); /* Chrome10-25,Safari5.1-6 */
@@ -61,6 +70,7 @@ export default {
   bottom: 0px;
   left: 0px;
   right: 0px;
+  z-index: -1;
 }
 
 .content {
@@ -78,18 +88,13 @@ export default {
 
     .main-title {
       margin-top: 20px;
-      width: 500px;
-
+      width: 400px;
 
       #title-anim {
         stroke-width: 3px;
         stroke-dasharray: 1000;
         stroke-dashoffset: 1000;
         animation: dash 4s linear forwards;
-      }
-
-      #title-real {
-        animation: appearWithDelay 3s linear;
       }
     }
   }
