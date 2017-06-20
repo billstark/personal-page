@@ -1,5 +1,9 @@
 <template lang="html">
+
+  <!-- the main container -->
   <div class="container">
+
+    <!-- background and particles -->
     <div class="background"></div>
     <vue-particles
       class="particles"
@@ -12,18 +16,32 @@
       :clickEffect="false"
     >
     </vue-particles>
+    <!-- end of background and particles -->
+
+    <!-- content -->
     <div class="content">
       <div class="main-wrapper">
+
+        <!-- spinning cube -->
         <cube class="cube"></cube>
-        <svg class="main-title">
-          <use xlink:href="#main-title-new" id="title-anim" />
-        </svg>
-        <h3>welcome to a little world of Yang Zhuohan</h3>
-        <div class="enter-button">
-          <div>step in</div>
+
+        <div class="welcome-container" v-show="!showMenu">
+          <svg class="main-title">
+            <use xlink:href="#main-title-new" id="title-anim" />
+          </svg>
+          <h3>welcome to a little world of Yang Zhuohan</h3>
+          <div class="enter-button">
+            <div @click="showMenu = !showMenu">step in</div>
+          </div>
         </div>
+        <div class="welcome-container" v-show="showMenu">
+
+        </div>
+
       </div>
     </div>
+    <!-- end of content -->
+
   </div>
 </template>
 
@@ -42,6 +60,7 @@ export default {
   },
   data() {
     return {
+      showMenu: false,
       dividerWidth: 400,
       dividerAnimate: true,
     };
@@ -90,6 +109,10 @@ export default {
 
   .main-wrapper {
     text-align: center;
+
+    .welcome-container {
+      height: 300px;
+    }
 
     .cube {
       transform: scale(.7);
@@ -158,7 +181,13 @@ export default {
 /* for mobile responsive */
 @media (max-width: $tablet-breakpoint) {
   .content {
+
     .main-wrapper {
+
+      .welcome-container {
+        height: 300px;
+      }
+
       .cube {
         transform: scale(.6);
       }
