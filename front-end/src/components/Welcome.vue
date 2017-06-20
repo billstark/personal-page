@@ -51,6 +51,7 @@ export default {
 
 <style lang="scss" scoped>
 @import '../assets/sass/animation.scss';
+@import '../assets/sass/variable.scss';
 
 .container {
   font-family: 'Brandon';
@@ -149,6 +150,37 @@ export default {
       &:hover {
         background-color: #fff;
         color: #333;
+      }
+    }
+  }
+}
+
+/* for mobile responsive */
+@media (max-width: $tablet-breakpoint) {
+  .content {
+    .main-wrapper {
+      .cube {
+        transform: scale(.6);
+      }
+
+      .main-title {
+        margin-top: 40px;
+        width: 250px;
+      }
+    }
+
+    h3 {
+      font-size: 13px;
+      margin-top: -15px;
+    }
+
+    .enter-button {
+      margin-top: 50px;
+
+      div {
+        font-size: 20px;
+        padding: 5px 10px;
+        width: 120px;
       }
     }
   }
