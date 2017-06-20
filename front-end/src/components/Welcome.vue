@@ -118,7 +118,7 @@ export default {
     margin-top: 0px;
     font-size: 20px;
     font-weight: 300;
-    color: #fff;
+    color: $paper;
     letter-spacing: 1px;
     opacity: 0;
     animation: floatUp ease-in .5s forwards;
@@ -139,16 +139,16 @@ export default {
       cursor: pointer;
       padding: 10px 30px;
       width: 150px;
-      color: #fff;
+      color: $silk;
       font-size: 26px;
       font-weight: 400;
       line-height: 26px;
-      border: 2px solid #fff;
+      border: 2px solid $silk;
       border-radius: 50px;
       transition: background-color .3s ease;
 
       &:hover {
-        background-color: #fff;
+        background-color: $silk;
         color: #333;
       }
     }
