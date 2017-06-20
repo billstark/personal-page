@@ -18,7 +18,7 @@
         <svg class="main-title">
           <use xlink:href="#main-title-new" id="title-anim" />
         </svg>
-        <h3>welcome to a little world of Zhuohan</h3>
+        <h3>welcome to a little world of Yang Zhuohan</h3>
         <div class="enter-button">
           <div>step in</div>
         </div>
