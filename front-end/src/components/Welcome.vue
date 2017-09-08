@@ -7,7 +7,7 @@
     <div class="background"></div>
     <vue-particles
       class="particles"
-      color="#fff"
+      color="#000"
       :particlesNumber="90"
       :particleSize="1"
       :moveSpeed="2"
@@ -85,11 +85,12 @@ export default {
   left: 0px;
   right: 0px;
   z-index: -2;
-  background: #303030; /* Old browsers */
-  background: -moz-radial-gradient(center, ellipse cover, #303030 0%, #000000 100%); /* FF3.6-15 */
-  background: -webkit-radial-gradient(center, ellipse cover, #303030 0%,#000000 100%); /* Chrome10-25,Safari5.1-6 */
-  background: radial-gradient(ellipse at center, #303030 0%,#000000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#303030', endColorstr='#000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  background: $paper;
+  // background: #303030; /* Old browsers */
+  // background: -moz-radial-gradient(center, ellipse cover, #303030 0%, #000000 100%); /* FF3.6-15 */
+  // background: -webkit-radial-gradient(center, ellipse cover, #303030 0%,#000000 100%); /* Chrome10-25,Safari5.1-6 */
+  // background: radial-gradient(ellipse at center, #303030 0%,#000000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#303030', endColorstr='#000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
 .particles {
@@ -141,7 +142,7 @@ export default {
     margin-top: 0px;
     font-size: 20px;
     font-weight: 300;
-    color: $paper;
+    color: $silk;
     letter-spacing: 1px;
     opacity: 0;
     animation: floatUp ease-in .5s forwards;
@@ -172,7 +173,7 @@ export default {
 
       &:hover {
         background-color: $silk;
-        color: #333;
+        color: $paper;
       }
     }
   }
