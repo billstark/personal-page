@@ -32,7 +32,7 @@
             </svg>
             <h3>welcome to a little world of Yang Zhuohan</h3>
             <div class="enter-button">
-              <router-link to="/test">
+              <router-link to="/intro">
                 <div>step in</div>
               </router-link>
             </div>
