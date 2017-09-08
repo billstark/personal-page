@@ -7,7 +7,7 @@
     <div class="background"></div>
     <vue-particles
       class="particles"
-      color="#000"
+      color="#373737"
       :particlesNumber="90"
       :particleSize="1"
       :moveSpeed="2"
@@ -20,25 +20,26 @@
 
     <!-- content -->
     <div class="content">
+
       <div class="main-wrapper">
 
-        <!-- spinning cube -->
-        <cube class="cube"></cube>
+          <!-- spinning cube -->
+          <cube class="cube" ></cube>
 
-        <div class="welcome-container" v-show="!showMenu">
-          <svg class="main-title">
-            <use xlink:href="#main-title-new" id="title-anim" />
-          </svg>
-          <h3>welcome to a little world of Yang Zhuohan</h3>
-          <div class="enter-button">
-            <div @click="showMenu = !showMenu">step in</div>
+          <div class="welcome-container">
+            <svg class="main-title">
+              <use xlink:href="#main-title-new" id="title-anim" />
+            </svg>
+            <h3>welcome to a little world of Yang Zhuohan</h3>
+            <div class="enter-button">
+              <router-link to="/test">
+                <div>step in</div>
+              </router-link>
+            </div>
           </div>
-        </div>
-        <div class="welcome-container" v-show="showMenu">
-
-        </div>
 
       </div>
+
     </div>
     <!-- end of content -->
 
@@ -141,7 +142,6 @@ export default {
   h3 {
     margin-top: 0px;
     font-size: 20px;
-    font-weight: 300;
     color: $silk;
     letter-spacing: 1px;
     opacity: 0;

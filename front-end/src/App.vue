@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <router-view></router-view>
+    <transition name="fade">
+      <router-view></router-view>
+    </transition>
   </div>
 </template>
 
@@ -41,5 +43,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
   height: 100vh;
+}
+
+a {
+  text-decoration: none;
 }
 </style>
