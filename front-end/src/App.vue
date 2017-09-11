@@ -18,6 +18,7 @@ export default {
 </script>
 
 <style lang="scss">
+@import 'assets/sass/variable.scss';
 
 @font-face {
   font-family: 'Brandon';
@@ -35,6 +36,7 @@ export default {
 
 body {
   margin: 0px;
+  background: $paper;
 }
 
 #app {

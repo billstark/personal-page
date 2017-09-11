@@ -1,9 +1,5 @@
 <template lang="html">
-  <div class="container">
-    <div class="top-banner">
 
-    </div>
-  </div>
 </template>
 
 <script>

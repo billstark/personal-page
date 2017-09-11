@@ -7,8 +7,8 @@
     <div class="background"></div>
     <vue-particles
       class="particles"
-      color="#373737"
-      :particlesNumber="90"
+      color="#76323F"
+      :particlesNumber="150"
       :particleSize="1"
       :moveSpeed="2"
       :lineLinked="false"
@@ -32,8 +32,8 @@
             </svg>
             <h3>welcome to a little world of Yang Zhuohan</h3>
             <div class="enter-button">
-              <router-link to="/intro">
-                <div>step in</div>
+              <router-link :to="{ path: introPath }">
+                <div>explore</div>
               </router-link>
             </div>
           </div>
@@ -64,6 +64,7 @@ export default {
       showMenu: false,
       dividerWidth: 400,
       dividerAnimate: true,
+      introPath: "/intro"
     };
   }
 }
@@ -142,7 +143,8 @@ export default {
   h3 {
     margin-top: 0px;
     font-size: 20px;
-    color: $silk;
+    color: $blackboard;
+    font-weight: 300;
     letter-spacing: 1px;
     opacity: 0;
     animation: floatUp ease-in .5s forwards;
@@ -163,16 +165,17 @@ export default {
       cursor: pointer;
       padding: 10px 30px;
       width: 150px;
-      color: $silk;
+      color: $blackboard;
       font-size: 26px;
       font-weight: 400;
       line-height: 26px;
-      border: 2px solid $silk;
+      border: 2px solid $blackboard;
       border-radius: 50px;
       transition: background-color .3s ease;
+      background-color: $paper;
 
       &:hover {
-        background-color: $silk;
+        background-color: $blackboard;
         color: $paper;
       }
     }

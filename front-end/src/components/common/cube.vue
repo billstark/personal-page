@@ -28,15 +28,15 @@
 
 @keyframes breath {
   0% {
-    border: 2px solid #C0B283;
+    border: 2px solid #565656;
     box-shadow: 0 0 30px rgba(255, 255, 255, 0);
   }
   50% {
-    border: 2px solid #F4F4F4;
+    // border: 2px solid #F4F4F4;
     box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
   }
   100% {
-    border: 2px solid #C0B283;
+    border: 2px solid #565656;
     box-shadow: 0 0 30px rgba(255, 255, 255, 0);
   }
 }
@@ -70,7 +70,7 @@
       border: 2px solid #fff;
       animation-name: breath;
       animation-iteration-count: infinite;
-      animation-duration: 3s;
+      animation-duration: 6s;
       animation-timing-function: ease;
     }
 
