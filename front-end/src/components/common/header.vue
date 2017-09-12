@@ -94,8 +94,8 @@ export default {
     ul {
       li {
         display: inline-block;
-        margin-left: 20px;
-        color: #fff;
+        margin-right: 20px;
+        color: $paper;
         cursor: pointer;
         padding: 5px;
         &:hover {
