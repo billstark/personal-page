@@ -24,7 +24,7 @@
       <div class="main-wrapper">
 
           <!-- spinning cube -->
-          <cube class="cube" ></cube>
+          <cube class="cube" color="#565656"></cube>
 
           <div class="welcome-container">
             <svg class="main-title">
@@ -64,7 +64,7 @@ export default {
       showMenu: false,
       dividerWidth: 400,
       dividerAnimate: true,
-      introPath: "/intro"
+      introPath: "/about"
     };
   }
 }

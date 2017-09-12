@@ -4,7 +4,7 @@ import Meta from 'vue-meta'
 import VueParticles from 'vue-particles'
 import Hello from '@/components/Hello'
 import Welcome from '@/components/Welcome'
-import Intro from '@/components/Intro'
+import About from '@/components/About'
 import Test from '@/components/Test'
 
 Vue.use(Router)
@@ -19,9 +19,9 @@ export default new Router({
       component: Welcome
     },
     {
-      path: '/intro',
+      path: '/about',
       name: 'Introduction',
-      component: Intro
+      component: About
     },
     {
       path: '/test',

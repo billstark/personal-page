@@ -2,16 +2,22 @@
   <div class="cube">
     <section class="container">
       <div class="cube-content">
-        <figure class="front"></figure>
-        <figure class="back"></figure>
-        <figure class="right"></figure>
-        <figure class="left"></figure>
-        <figure class="top"></figure>
-        <figure class="bottom"></figure>
+        <figure class="front" v-bind:style="{'border-color': color}"></figure>
+        <figure class="back" v-bind:style="{'border-color': color}"></figure>
+        <figure class="right" v-bind:style="{'border-color': color}"></figure>
+        <figure class="left" v-bind:style="{'border-color': color}"></figure>
+        <figure class="top" v-bind:style="{'border-color': color}"></figure>
+        <figure class="bottom" v-bind:style="{'border-color': color}"></figure>
       </div>
     </section>
   </div>
 </template>
+
+<script>
+export default {
+  props: ['color']
+}
+</script>
 
 <style lang="scss" scoped>
 @keyframes spin {
@@ -28,16 +34,16 @@
 
 @keyframes breath {
   0% {
-    border: 2px solid #565656;
-    box-shadow: 0 0 30px rgba(255, 255, 255, 0);
+    // border: 2px solid #565656;
+    // box-shadow: 0 0 30px rgba(255, 255, 255, 0);
   }
   50% {
     // border: 2px solid #F4F4F4;
-    box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+    // box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
   }
   100% {
-    border: 2px solid #565656;
-    box-shadow: 0 0 30px rgba(255, 255, 255, 0);
+    // border: 2px solid #565656;
+    // box-shadow: 0 0 30px rgba(255, 255, 255, 0);
   }
 }
 .cube {
