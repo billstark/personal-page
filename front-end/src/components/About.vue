@@ -7,14 +7,14 @@
         <h1>Yang Zhuohan</h1>
         <h4>Software Engineer</h4>
         <div class="social-media">
-          <div class="sm-icon github">
-            
+          <div class="sm-icon">
+            <icon name="linkedin-square" scale="2" class="icon"></icon>
           </div>
-          <div class="sm-icon linkedin">
-
+          <div class="sm-icon">
+            <icon name="github-square" scale="2" class="icon"></icon>
           </div>
-          <div class="sm-icon facebook">
-
+          <div class="sm-icon">
+            <icon name="facebook-square" scale="2" class="icon"></icon>
           </div>
         </div>
       </div>
@@ -28,6 +28,7 @@
 
 <script>
 import Heade from './common/Header';
+import Icon from 'vue-awesome/components/Icon'
 
 export default {
   data() {
@@ -39,7 +40,8 @@ export default {
   attached() {},
   methods: {},
   components: {
-    Heade
+    Heade,
+    Icon
   }
 };
 </script>
@@ -90,6 +92,26 @@ export default {
       margin-top: 10px;
       color: $silk;
       font-weight: 300;
+    }
+
+    .social-media {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      margin-top: 10px;
+      .sm-icon {
+        display: inline-block;
+        margin-right: 10px;
+        cursor: pointer;
+
+        .icon {
+          color: $gold;
+          transition: all .5s;
+          &:hover {
+            opacity: .5;
+          }
+        }
+      }
     }
   }
 }

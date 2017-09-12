@@ -50,4 +50,14 @@ body {
 a {
   text-decoration: none;
 }
+
+.fa-icon {
+  width: auto;
+  height: 1em; /* or any other relative font sizes */
+
+  /* You would have to include the following two lines to make this work in Safari */
+  max-width: 100%;
+  max-height: 100%;
+}
+
 </style>
