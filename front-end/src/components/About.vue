@@ -33,12 +33,19 @@
           <h4 class="i-am">I AM</h4>
         </div>
         <div class="intro">
-          <p>
+          <p class="forward">
             <i>"Fireborn, <br>
             the traveller, 
             the painter,<br>
             guardian of the night, <br>
             a student of Computer Science."<br></i>            
+          </p>
+
+          <p>
+            I was born in <b>Chongqing, China</b>. (Chongqing is famous for its hot weather. That's why I call <br> 
+            myself "Fireborn" XD) I am currently an <b>undergraduate</b> from <b>National University of Singapore</b>, <br>
+            majoring in <b>Computer Science</b>. Apart from <b>coding</b> till mid-night, I am kin of <b>travelling</b> and <br> 
+            <b>photography</b>. I intend to be an excellent <b>software engineer</b>.
           </p>
         </div>
       </div>
@@ -202,7 +209,13 @@ export default {
     font-size: 13px;
 
     p {
+      margin-top: 30px;
+    }
+
+    .forward {
+      margin-top: 0px;
       line-height: 25px;
+      font-size: 14px;
     }
   }
 }
