@@ -60,6 +60,8 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  opacity: 0;
+  animation: floatDown 1s 1.5s linear forwards;
 
   .header {
     max-width: 1024px;

@@ -4,18 +4,19 @@
     <div class="top-banner">
       <div class="cover"></div>
       <div class="banner-content">
-        <h1>Yang Zhuohan</h1>
-        <h4>Software Engineer</h4>
+        <!-- <h1>Yang Zhuohan</h1> -->
+        <h1>YANG ZHUOHAN</h1>
+        <h4>Software Engineer & Designer</h4>
         <div class="social-media">
-          <div class="sm-icon">
+          <a class="sm-icon" href="https://www.linkedin.com/in/zhuohan-yang-8ba3a5117/">
             <icon name="linkedin-square" scale="2" class="icon"></icon>
-          </div>
-          <div class="sm-icon">
+          </a>
+          <a class="sm-icon" href="https://github.com/billstark">
             <icon name="github-square" scale="2" class="icon"></icon>
-          </div>
-          <div class="sm-icon">
+          </a>
+          <a class="sm-icon" href="https://www.facebook.com/profile.php?id=100005438507300">
             <icon name="facebook-square" scale="2" class="icon"></icon>
-          </div>
+          </a>
         </div>
       </div>
     </div>
@@ -60,6 +61,8 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  opacity: 0;
+  animation: fadeIn 1s .5s linear forwards;
 
   .cover {
     position: absolute;
@@ -67,37 +70,40 @@ export default {
     right: 0px;
     height: calc(100vh - 100px);
     background-color: #000;
-    opacity: .4;
+    opacity: .52;
     z-index: 1;
   }
 
   .banner-content {
+    text-align: center;
     position: absolute;
     width: 100%;
     max-width: 1024px;
     height: calc(100vh - 200px);
     z-index: 2;
-    padding: 90px 50px 50px 10px;
-    text-align: right;
+    padding: 40px 50px 50px 50px;
     display: flex;
     justify-content: center;
     flex-direction: column;
     color: $paper;
+    opacity: 0;
+    animation: floatDown 1s 2.5s linear forwards;
 
     h1 {
       margin-bottom: 0px;
+      color: $shell;
     }
 
     h4 {
       margin-top: 10px;
-      color: $silk;
+      color: $sand;
       font-weight: 300;
     }
 
     .social-media {
       display: flex;
       flex-direction: row;
-      justify-content: flex-end;
+      justify-content: center;
       margin-top: 10px;
       .sm-icon {
         display: inline-block;
@@ -105,7 +111,8 @@ export default {
         cursor: pointer;
 
         .icon {
-          color: $gold;
+          color: lighten($tan, 10%);
+          opacity: .8;
           transition: all .5s;
           &:hover {
             opacity: .5;
