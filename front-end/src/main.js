@@ -3,9 +3,10 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import 'vue-awesome/icons/facebook-square'
-import 'vue-awesome/icons/github-square'
-import 'vue-awesome/icons/linkedin-square'
+import 'vue-awesome/icons/facebook'
+import 'vue-awesome/icons/github'
+import 'vue-awesome/icons/linkedin'
+import 'vue-awesome/icons/address-card'
 
 Vue.config.productionTip = false
 
