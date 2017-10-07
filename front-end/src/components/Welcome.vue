@@ -75,7 +75,7 @@ export default {
 @import '../assets/sass/variable.scss';
 
 .container {
-  font-family: 'Brandon';
+  font-family: 'GT-Walsheim';
   width: 100%;
   height: 100%;
 }

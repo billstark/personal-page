@@ -5,8 +5,8 @@
       <!-- <div class="cover"></div> -->
       <div class="banner-content">
         <!-- <h1>Yang Zhuohan</h1> -->
-        <!-- <h1>YANG ZHUOHAN</h1> -->
-        <h1>yang zhuohan</h1>
+        <h1>YANG ZHUOHAN</h1>
+        <!-- <h4>Software Engineer & Designer</h4> -->
         <h4>Software Engineer & Designer</h4>
         <div class="download-resume">
           <div class="download-button">
@@ -70,7 +70,7 @@ export default {
 .container {
   opacity: 0;
   animation: fadeIn .6s .5s linear forwards;
-  font-family: 'Brandon';
+  font-family: 'GT-Walsheim';
 }
 
 // for top banner
@@ -129,7 +129,7 @@ export default {
     }
 
     h4 {
-      margin-top: 0px;
+      margin-top: 10px;
       color: $sand;
       letter-spacing: 3px;
       font-weight: 300;
