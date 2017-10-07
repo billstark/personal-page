@@ -13,6 +13,9 @@
     >
     </vue-particles> -->
     <div class="header">
+      <div class="header-logo">
+        <cube class="cube" color="#DCD0C0"></cube>
+      </div>
       <div class="header-items">
         <div class="item-list">
           <ul>
