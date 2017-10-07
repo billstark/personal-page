@@ -2,22 +2,11 @@
   <div class="container">
     <heade></heade>
     <div class="top-banner">
-      <div class="cover"></div>
+      <!-- <div class="cover"></div> -->
       <div class="banner-content">
         <!-- <h1>Yang Zhuohan</h1> -->
         <h1>YANG ZHUOHAN</h1>
         <h4>Software Engineer & Designer</h4>
-        <!-- <div class="social-media">
-          <a class="sm-icon" href="https://www.linkedin.com/in/zhuohan-yang-8ba3a5117/">
-            <icon name="linkedin" scale="1.5" class="icon"></icon>
-          </a>
-          <a class="sm-icon" href="https://github.com/billstark">
-            <icon name="github" scale="1.5" class="icon"></icon>
-          </a>
-          <a class="sm-icon" href="https://www.facebook.com/profile.php?id=100005438507300">
-            <icon name="facebook" scale="1.5" class="icon"></icon>
-          </a>
-        </div> -->
         <div class="download-resume">
           <div class="download-button">
             CV.download
@@ -34,16 +23,16 @@
         </div>
         <div class="intro">
           <p class="forward">
-            <i>"Fireborn, <br>
-            the traveller, 
-            the painter,<br>
+            <i>"Fireborn,
+            the traveller,<br> 
+            the painter,
             guardian of the night, <br>
             a student of Computer Science."<br></i>            
           </p>
 
           <p>
             I was born in <b>Chongqing, China</b>. (Chongqing is famous for its hot weather. That's why I call <br> 
-            myself "Fireborn" XD) I am currently an <b>undergraduate</b> from <b>National University of Singapore</b>, <br>
+            myself "Fireborn" XD) I am currently an undergraduate from <b>National University of Singapore</b>, <br>
             majoring in <b>Computer Science</b>. Apart from <b>coding</b> till mid-night, I am kin of <b>travelling</b> and <br> 
             <b>photography</b>. I intend to be an excellent <b>software engineer</b>.
           </p>
@@ -80,16 +69,18 @@ export default {
 .container {
   opacity: 0;
   animation: fadeIn .6s .5s linear forwards;
+  font-family: 'Brandon';
 }
 
 // for top banner
 .top-banner {
-  height: calc(100vh - 100px);
+  height: 100vh;
   width: 100%;
-  background-image: url("../assets/img/IMG_3924.jpg");
-  background-position: bottom left;
-  background-repeat: no-repeat;
-  background-size: cover;
+  // background-image: url("../assets/img/IMG_3924.jpg");
+  // background-position: bottom left;
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  background-color: #0B1013;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -105,7 +96,7 @@ export default {
   }
 
   .banner-content {
-    text-align: center;
+    text-align: right;
     position: absolute;
     width: 100%;
     max-width: 1024px;
@@ -121,23 +112,28 @@ export default {
 
     h1 {
       margin-bottom: 0px;
-      // color: $shell;
+      letter-spacing: 5px;
+      font-size: 50px;
+      font-weight: bold;
       color: $tan;
     }
 
     h4 {
       margin-top: 10px;
       color: $sand;
+      letter-spacing: 1px;
       font-weight: 300;
+      font-size: 20px;
     }
 
     .download-resume {
       margin-top: 20px;
       display: flex;
       flex-direction: row;
-      justify-content: center;
+      justify-content: flex-end;
 
       .download-button {
+        text-align: center;
         padding: 7px 20px;
         border: 1px solid $shell;
         color: $shell;
@@ -206,7 +202,7 @@ export default {
 
   .intro {
     text-align: center;
-    font-size: 13px;
+    font-size: 16px;
 
     p {
       margin-top: 30px;
