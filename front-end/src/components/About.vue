@@ -5,7 +5,8 @@
       <!-- <div class="cover"></div> -->
       <div class="banner-content">
         <!-- <h1>Yang Zhuohan</h1> -->
-        <h1>YANG ZHUOHAN</h1>
+        <!-- <h1>YANG ZHUOHAN</h1> -->
+        <h1>yang zhuohan</h1>
         <h4>Software Engineer & Designer</h4>
         <div class="download-resume">
           <div class="download-button">
@@ -77,10 +78,9 @@ export default {
   height: 100vh;
   width: 100%;
   background-color: #1c1c1c;
-  background-image: url("../assets/img/texture.png");
-  // background-position: bottom left;
-  // background-repeat: no-repeat;
-  // background-size: cover;
+  // background-image: url("../assets/img/texture.png");
+  // background-image: url("../assets/img/inspiration-geometry.png");
+  background-image: url("../assets/img/shattered.png");
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -102,7 +102,6 @@ export default {
     max-width: 1024px;
     height: 100vh;
     z-index: 2;
-    // padding: 40px 0px 0px 0px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -124,6 +123,7 @@ export default {
       letter-spacing: 1px;
       font-weight: 400;
       font-size: 20px;
+      opacity: .6;
     }
 
     .download-resume {

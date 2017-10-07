@@ -4,7 +4,7 @@
       class="particles"
       color="#76323F"
       linesColor="#333"
-      :particlesNumber="150"
+      :particlesNumber="200"
       :particleSize="2"
       :moveSpeed="1"
       :lineLinked="false"
@@ -13,13 +13,7 @@
     >
     </vue-particles>
     <div class="header">
-<!--       <div class="header-logo">
-        <cube class="cube" color="#DCD0C0"></cube>
-      </div> -->
       <div class="header-items">
-<!--         <div class="current-title">
-          <h3>{{ title }}</h3>
-        </div> -->
         <div class="item-list">
           <ul>
             <li class="active">about</li>
