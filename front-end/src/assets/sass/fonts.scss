@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'Brandon';
   src: url('assets/font/Brandon_thin.otf') format('truetype');
-  font-weight: thin;
+  font-weight: 300;
   font-style: thin;
 }
 
@@ -16,12 +16,12 @@
   font-family: 'Brandon';
   src: url('assets/font/Brandon_bld.otf') format('truetype');
   font-weight: 500;
-  font-style: normal;
+  font-style: bold;
 }
 
 @font-face {
   font-family: 'Brandon';
   src: url('assets/font/Brandon_blk.otf') format('truetype');
   font-weight: 600;
-  font-style: normal;
+  font-style: bolder;
 }

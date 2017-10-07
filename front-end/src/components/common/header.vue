@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="header-container">
-<!--     <vue-particles
+    <vue-particles
       class="particles"
       color="#76323F"
       linesColor="#333"
@@ -11,11 +11,11 @@
       :hoverEffect="false"
       :clickEffect="false"
     >
-    </vue-particles> -->
+    </vue-particles>
     <div class="header">
-      <div class="header-logo">
-        <cube class="cube" color="#DCD0C0"></cube>
-      </div>
+<!--       <router-link :to="{ path: mainPath }">
+        <cube class="cube" color="#1c1c1c"></cube>
+      </router-link> -->
       <div class="header-items">
         <div class="item-list">
           <ul>
@@ -36,7 +36,8 @@ import Cube from './Cube';
 export default {
   data() {
     return {
-      title: "About"
+      title: "About",
+      mainPath: "/"
     };
   },
   components: {
@@ -56,6 +57,14 @@ export default {
   right: 0px;
   top: 0px;
   height: 60px;
+}
+
+.cube {
+  width: 100px;
+  transform: scale(.2);
+  position: relative;
+  left: 15px;
+  top: -18px;
 }
 
 .header-container {
@@ -106,13 +115,14 @@ export default {
   .item-list {
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: center;
     ul {
       width: 100%;
       max-width: 500px;
       display: flex;
       flex-direction: row;
       justify-content: space-around;
+      padding-left: 0px;
       li {
         display: inline-block;
         margin-right: 20px;

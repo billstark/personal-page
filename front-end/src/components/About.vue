@@ -107,7 +107,7 @@ export default {
   }
 
   .banner-content {
-    text-align: right;
+    text-align: center;
     position: absolute;
     width: 100%;
     max-width: 1024px;
@@ -123,25 +123,24 @@ export default {
     h1 {
       margin-bottom: 0px;
       letter-spacing: 10px;
-      font-size: 60px;
+      font-size: 70px;
       font-weight: 500;
       color: $tan;
     }
 
     h4 {
-      margin-top: 10px;
+      margin-top: 0px;
       color: $sand;
-      letter-spacing: 1px;
-      font-weight: 400;
-      font-size: 20px;
-      opacity: .6;
+      letter-spacing: 3px;
+      font-weight: 300;
+      font-size: 22px;
     }
 
     .download-resume {
-      margin-top: 20px;
+      margin-top: 30px;
       display: flex;
       flex-direction: row;
-      justify-content: flex-end;
+      justify-content: center;
 
       .download-button {
         text-align: center;
