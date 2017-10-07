@@ -76,11 +76,11 @@ export default {
 .top-banner {
   height: 100vh;
   width: 100%;
-  // background-image: url("../assets/img/IMG_3924.jpg");
+  background-color: #1c1c1c;
+  background-image: url("../assets/img/texture.png");
   // background-position: bottom left;
   // background-repeat: no-repeat;
   // background-size: cover;
-  background-color: #0B1013;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -100,9 +100,9 @@ export default {
     position: absolute;
     width: 100%;
     max-width: 1024px;
-    height: calc(100vh - 200px);
+    height: 100vh;
     z-index: 2;
-    padding: 40px 0px 0px 0px;
+    // padding: 40px 0px 0px 0px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -112,9 +112,9 @@ export default {
 
     h1 {
       margin-bottom: 0px;
-      letter-spacing: 5px;
-      font-size: 50px;
-      font-weight: bold;
+      letter-spacing: 10px;
+      font-size: 60px;
+      font-weight: 500;
       color: $tan;
     }
 
@@ -122,7 +122,7 @@ export default {
       margin-top: 10px;
       color: $sand;
       letter-spacing: 1px;
-      font-weight: 300;
+      font-weight: 400;
       font-size: 20px;
     }
 

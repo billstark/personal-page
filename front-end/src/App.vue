@@ -19,20 +19,7 @@ export default {
 
 <style lang="scss">
 @import 'assets/sass/variable.scss';
-
-@font-face {
-  font-family: 'Brandon';
-  src: url('assets/font/Brandon_thin.otf') format('truetype');
-  font-weight: thin;
-  font-style: thin;
-}
-
-@font-face {
-  font-family: 'Brandon';
-  src: url('assets/font/Brandon_reg.otf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-}
+@import 'assets/sass/fonts.scss';
 
 body {
   margin: 0px;
