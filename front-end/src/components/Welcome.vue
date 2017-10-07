@@ -4,18 +4,18 @@
   <div class="container">
 
     <!-- background and particles -->
-    <div class="background"></div>
+<!--     <div class="background"></div>
     <vue-particles
       class="particles"
       color="#76323F"
-      :particlesNumber="150"
-      :particleSize="1"
+      :particlesNumber="50"
+      :particleSize="2"
       :moveSpeed="2"
       :lineLinked="false"
       :hoverEffect="false"
       :clickEffect="false"
     >
-    </vue-particles>
+    </vue-particles> -->
     <!-- end of background and particles -->
 
     <!-- content -->

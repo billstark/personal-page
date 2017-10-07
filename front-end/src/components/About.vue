@@ -77,13 +77,24 @@ export default {
 .top-banner {
   height: 100vh;
   width: 100%;
-  background-color: #1c1c1c;
-  // background-image: url("../assets/img/texture.png");
+  background-color: #000;
+  // background-image: url("../assets/img/xv.png");
   // background-image: url("../assets/img/inspiration-geometry.png");
-  background-image: url("../assets/img/shattered.png");
+
+
   display: flex;
   flex-direction: row;
   justify-content: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    background-image: url("../assets/img/shattered.png");
+    opacity: .7;
+  }
 
   .cover {
     position: absolute;
