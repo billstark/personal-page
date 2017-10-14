@@ -25,7 +25,7 @@
           </div>
           <div class="intro">
             <p class="forward">
-              <i>"the traveller, the painter,<br>
+              <i>"The traveller, the painter,<br>
               guardian of the night, <br>
               a student of Computer Science."<br></i>            
             </p>
