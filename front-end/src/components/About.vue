@@ -17,26 +17,26 @@
     </div>
 
     <div class="short-intro">
-      <div class="intro-container">
-        <div class="title">
-          <icon name="address-card" class="icon" scale="1.5"></icon>
-          <h4 class="i-am">I AM</h4>
-        </div>
-        <div class="intro">
-          <p class="forward">
-            <i>"Fireborn,
-            the traveller,<br> 
-            the painter,
-            guardian of the night, <br>
-            a student of Computer Science."<br></i>            
-          </p>
+      <div class="short-intro-container">
+        <div class="intro-container">
+          <div class="title">
+            <!-- <icon name="address-card" class="icon" scale="1.5"></icon> -->
+            <h4 class="i-am">I AM</h4>
+          </div>
+          <div class="intro">
+            <p class="forward">
+              <i>"the traveller, the painter,<br>
+              guardian of the night, <br>
+              a student of Computer Science."<br></i>            
+            </p>
 
-          <p>
-            I was born in <b>Chongqing, China</b>. (Chongqing is famous for its hot weather. That's why I call <br> 
-            myself "Fireborn" XD) I am currently an undergraduate from <b>National University of Singapore</b>, <br>
-            majoring in <b>Computer Science</b>. Apart from <b>coding</b> till mid-night, I am kin of <b>travelling</b> and <br> 
-            <b>photography</b>. I intend to be an excellent <b>software engineer</b>.
-          </p>
+            <p>
+              I was born in <b>Chongqing, China</b>. I am currently an undergraduate from <br> 
+              National University of Singapore</b>, majoring in <b>Computer Science</b>. Apart <br>
+              from <b>coding</b> till mid-night, I am kin of <b>travelling</b> and <b>photography</b>. <br>
+              I intend to be an excellent <b>software engineer</b>.
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -191,15 +191,43 @@ export default {
 // For intro
 .short-intro {
   height: 100vh;
+  min-height: 500px;
   display: flex;
   flex-direction: row;
   justify-content: center;
+  background-image: url("../assets/img/me-bg.png");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: contain;
+
+  .short-intro-container {
+    height: 100%;
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;  
+  }
+}
+
+.my-photo {
+  position: absolute;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  left: -200px;
+  img {
+    height: 90%;
+  }
 }
 
 .intro-container {
-  max-width: 1024px;
-  width: 100%;
-  padding: 50px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: right;
 
   .title {
     text-align: center;
@@ -207,6 +235,7 @@ export default {
     .i-am {
       margin-top: 10px;
       letter-spacing: 1px;
+      font-size: 30px;
     }
   }
 
