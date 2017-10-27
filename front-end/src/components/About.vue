@@ -3,8 +3,8 @@
     <heade></heade>
 
     <!-- top banner  -->
-    <div class="top-banner">
-      <div class="banner-content">
+    <div class="top-banner full-height-container">
+      <div class="banner-content container">
         <h1>YANG ZHUOHAN</h1>
         <h4>Software Engineer & Designer</h4>
         <div class="download-resume">
@@ -16,8 +16,8 @@
     </div>
 
     <!-- a short intro  -->
-    <div class="short-intro">
-      <div class="short-intro-container">
+    <div class="short-intro full-height-container">
+      <div class="short-intro-container container">
         <div class="intro-container">
           <div class="title">
             <h4 class="i-am">I AM</h4>
@@ -40,6 +40,14 @@
       </div>
     </div>
 
+    <!-- abilities -->
+    <div class="ability-info full-height-container">
+      <div class="ability-info-container container">
+        <div class="title">
+          <h4 class="i-have">I HAVE</h4>
+        </div>
+      </div>
+    </div>  
 
   </div>
 </template>
@@ -66,6 +74,7 @@ export default {
 
 <style lang="scss" scoped>
 @import '../assets/sass/animation.scss';
+@import '../assets/sass/common.scss';
 @import '../assets/sass/variable.scss';
 
 .container {
@@ -76,12 +85,7 @@ export default {
 
 // for top banner
 .top-banner {
-  height: 100vh;
-  width: 100%;
   background-color: #000;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
 
   &::before {
     content: "";
@@ -188,20 +192,13 @@ export default {
 
 // For intro
 .short-intro {
-  height: 100vh;
   min-height: 500px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
   background-image: url("../assets/img/me-bg.png");
   background-repeat: no-repeat;
   background-position: left;
   background-size: contain;
 
   .short-intro-container {
-    height: 100%;
-    width: 100%;
-    max-width: 1024px;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;  
@@ -250,6 +247,14 @@ export default {
       line-height: 25px;
       font-size: 14px;
     }
+  }
+}
+
+// for abilities
+.ability-info {
+  background-color: $choco;
+  .ability-info-container {
+
   }
 }
 
