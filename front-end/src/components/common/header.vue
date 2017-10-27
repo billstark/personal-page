@@ -13,9 +13,6 @@
     >
     </vue-particles>
     <div class="header">
-<!--       <router-link :to="{ path: mainPath }">
-        <cube class="cube" color="#1c1c1c"></cube>
-      </router-link> -->
       <div class="header-items">
         <div class="item-list">
           <ul>
@@ -59,14 +56,6 @@ export default {
   height: 60px;
 }
 
-.cube {
-  width: 100px;
-  transform: scale(.2);
-  position: relative;
-  left: 15px;
-  top: -18px;
-}
-
 .header-container {
   height: 60px;
   background-color: $paper;
@@ -96,13 +85,8 @@ export default {
 }
 
 .header-items {
-  // width: calc(100% - 100px);
   width: 100%;
   height: 50px;
-  // display: flex;
-  // flex-direction: row;
-  // justify-content: space-between;
-  // justify-content: space-around;
 
   .current-title {
     width: 100px;

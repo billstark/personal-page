@@ -1,12 +1,11 @@
 <template lang="html">
   <div class="container">
     <heade></heade>
+
+    <!-- top banner  -->
     <div class="top-banner">
-      <!-- <div class="cover"></div> -->
       <div class="banner-content">
-        <!-- <h1>Yang Zhuohan</h1> -->
         <h1>YANG ZHUOHAN</h1>
-        <!-- <h4>Software Engineer & Designer</h4> -->
         <h4>Software Engineer & Designer</h4>
         <div class="download-resume">
           <div class="download-button">
@@ -16,11 +15,11 @@
       </div>
     </div>
 
+    <!-- a short intro  -->
     <div class="short-intro">
       <div class="short-intro-container">
         <div class="intro-container">
           <div class="title">
-            <!-- <icon name="address-card" class="icon" scale="1.5"></icon> -->
             <h4 class="i-am">I AM</h4>
           </div>
           <div class="intro">
@@ -40,6 +39,8 @@
         </div>
       </div>
     </div>
+
+
   </div>
 </template>
 
@@ -78,10 +79,6 @@ export default {
   height: 100vh;
   width: 100%;
   background-color: #000;
-  // background-image: url("../assets/img/xv.png");
-  // background-image: url("../assets/img/inspiration-geometry.png");
-
-
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -90,6 +87,7 @@ export default {
     content: "";
     position: absolute;
     width: 100%;
+    min-width: 1024px;
     height: 100vh;
     z-index: 1;
     background-image: url("../assets/img/shattered.png");

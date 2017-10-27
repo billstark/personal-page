@@ -24,6 +24,7 @@ export default {
 body {
   margin: 0px;
   background: $paper;
+  min-width: 1024px;
 }
 
 #app {
