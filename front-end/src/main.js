@@ -7,6 +7,9 @@ import 'vue-awesome/icons/facebook'
 import 'vue-awesome/icons/github'
 import 'vue-awesome/icons/linkedin'
 import 'vue-awesome/icons/address-card'
+import 'vue-awesome/icons/code'
+import 'vue-awesome/icons/space-shuttle'
+import 'vue-awesome/icons/globe'
 
 Vue.config.productionTip = false
 

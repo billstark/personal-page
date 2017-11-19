@@ -4,7 +4,7 @@ import Meta from 'vue-meta'
 import VueParticles from 'vue-particles'
 import Hello from '@/components/Hello'
 import Welcome from '@/components/Welcome'
-import About from '@/components/About'
+import About from '@/components/about/About'
 import Test from '@/components/Test'
 
 Vue.use(Router)
