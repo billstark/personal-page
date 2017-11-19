@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="header-container">
-    <vue-particles
+<!--     <vue-particles
       class="particles"
       color="#76323F"
       linesColor="#333"
@@ -11,7 +11,7 @@
       :hoverEffect="false"
       :clickEffect="false"
     >
-    </vue-particles>
+    </vue-particles> -->
     <div class="header">
       <div class="header-items">
         <div class="item-list">
