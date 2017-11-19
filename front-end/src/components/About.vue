@@ -254,7 +254,11 @@ export default {
 .ability-info {
   background-color: $choco;
   .ability-info-container {
-
+    .i-have {
+      color: $paper;
+      font-family: 'GT-Walsheim';
+      font-size: 30px;
+    }
   }
 }
 
