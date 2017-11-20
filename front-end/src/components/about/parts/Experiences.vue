@@ -104,16 +104,13 @@ export default {
         opacity: .6;
       }
       a {
-        border: 1px solid $oxblood;
-        padding: 2px 8px;
         color: $oxblood;
         opacity: 1;
         font-size: 13px;
         font-weight: 400;
         transition: all .5s ease;
         &:hover {
-          background-color: $oxblood;
-          color: $paper;
+          opacity: .7;
         }
       }
     }
