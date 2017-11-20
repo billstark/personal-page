@@ -83,7 +83,6 @@ export default {
 @import '../../../assets/sass/common.scss';
 @import '../../../assets/sass/variable.scss';
 
-// for abilities
 .ability-info {
   background-color: $choco;
   .ability-info-container {

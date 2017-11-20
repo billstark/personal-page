@@ -17,6 +17,7 @@
 
     <short-intro></short-intro>
     <abilities></abilities>
+    <experiences></experiences>
 
   </div>
 </template>
@@ -25,6 +26,7 @@
 import Heade from './../common/Header';
 import ShortIntro from './parts/ShortIntro';
 import Abilities from './parts/Abilities';
+import Experiences from './parts/Experiences';
 
 export default {
   data() {
@@ -38,7 +40,8 @@ export default {
   components: {
     Heade,
     ShortIntro,
-    Abilities
+    Abilities,
+    Experiences
   }
 };
 </script>
