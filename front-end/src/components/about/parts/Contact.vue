@@ -4,7 +4,6 @@
       <div class="title">
         <h4 class="i-hear-from">I HEAR FROM YOU</h4>
       </div>
-
       <div class="summary">
         <p>
           If you would like to introduce me an oppotunity or if you have any suggestions on how I should improve my website, please email me through the link below.
@@ -90,6 +89,7 @@ export default {
 
       &:hover {
         background-color: $paper;
+        opacity: 1;
         a {
           color: $choco;
         }

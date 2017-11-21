@@ -19,12 +19,13 @@
     <abilities></abilities>
     <experiences></experiences>
     <contact></contact>
-
+    <foote></foote>
   </div>
 </template>
 
 <script>
 import Heade from './../common/Header';
+import Foote from './../common/footer';
 import ShortIntro from './parts/ShortIntro';
 import Abilities from './parts/Abilities';
 import Experiences from './parts/Experiences';
@@ -41,6 +42,7 @@ export default {
   methods: {},
   components: {
     Heade,
+    Foote,
     ShortIntro,
     Abilities,
     Experiences,
