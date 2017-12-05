@@ -68,7 +68,7 @@ export default {
     };
   },
   metaInfo: {
-    title: "World in Square - Zhuohan's personal page"
+    title: "World In Square - Zhuohan's personal page"
   }
 }
 </script>
