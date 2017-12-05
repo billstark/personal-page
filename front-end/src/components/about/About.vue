@@ -7,11 +7,13 @@
         <div class="banner-content container">
           <h1>YANG ZHUOHAN</h1>
           <h4>Software Engineer & Designer</h4>
-          <div class="download-resume">
+          <a class="download-resume" 
+             href="https://www.dropbox.com/s/r49vsty8d32ej77/Yang%20Zhuohan%20CV.pdf?dl=0"
+             target="_blank">
             <div class="download-button">
               resume.download
             </div>
-          </div>
+          </a>
         </div>
       </div>
 
@@ -136,8 +138,8 @@ export default {
       .download-button {
         text-align: center;
         padding: 7px 20px;
-        border: 1px solid $shell;
         color: $shell;
+        border: 1px solid $shell;
         letter-spacing: .5px;
         background-color: transparent;
         width: 140px;
@@ -146,8 +148,8 @@ export default {
         transition: background-color .3s ease;
 
         &:hover {
-          color: $blackboard;
           background-color: $shell;
+          color: $blackboard;  
         }
       }
     }
