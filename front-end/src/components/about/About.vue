@@ -55,6 +55,9 @@ export default {
     Experiences,
     Contact,
     Mholder
+  },
+  metaInfo: {
+    title: "World In Square - About"
   }
 };
 </script>

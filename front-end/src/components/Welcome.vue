@@ -57,7 +57,7 @@ export default {
     Divider
   },
   mounted() {
-
+    
   },
   data() {
     return {
@@ -66,6 +66,9 @@ export default {
       dividerAnimate: true,
       introPath: "/about"
     };
+  },
+  metaInfo: {
+    title: "World in Square - Zhuohan's personal page"
   }
 }
 </script>
