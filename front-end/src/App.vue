@@ -24,7 +24,6 @@ export default {
 body {
   margin: 0px;
   background: $paper;
-  min-width: 1024px;
 }
 
 #app {
@@ -46,6 +45,10 @@ a {
   /* You would have to include the following two lines to make this work in Safari */
   max-width: 100%;
   max-height: 100%;
+}
+
+@media (min-width: $laptop-breakpoint) {
+  min-width: 1024px;
 }
 
 </style>

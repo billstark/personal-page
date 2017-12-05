@@ -1,25 +1,29 @@
 <template lang="html">
   <div class="container">
-    <heade></heade>
-
-    <!-- top banner  -->
-    <div class="top-banner full-height-container">
-      <div class="banner-content container">
-        <h1>YANG ZHUOHAN</h1>
-        <h4>Software Engineer & Designer</h4>
-        <div class="download-resume">
-          <div class="download-button">
-            resume.download
+    <div class="desktop-container">
+      <heade></heade>
+      <!-- top banner  -->
+      <div class="top-banner full-height-container">
+        <div class="banner-content container">
+          <h1>YANG ZHUOHAN</h1>
+          <h4>Software Engineer & Designer</h4>
+          <div class="download-resume">
+            <div class="download-button">
+              resume.download
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <short-intro></short-intro>
-    <abilities></abilities>
-    <experiences></experiences>
-    <contact></contact>
-    <foote></foote>
+      <short-intro></short-intro>
+      <abilities></abilities>
+      <experiences></experiences>
+      <contact></contact>
+      <foote></foote>
+    </div>
+    <div class="temp-mobile-holder">
+      <mholder></mholder>
+    </div>
   </div>
 </template>
 
@@ -30,6 +34,7 @@ import ShortIntro from './parts/ShortIntro';
 import Abilities from './parts/Abilities';
 import Experiences from './parts/Experiences';
 import Contact from './parts/Contact';
+import Mholder from './../common/mholder';
 
 export default {
   data() {
@@ -46,7 +51,8 @@ export default {
     ShortIntro,
     Abilities,
     Experiences,
-    Contact
+    Contact,
+    Mholder
   }
 };
 </script>
@@ -60,6 +66,10 @@ export default {
   opacity: 0;
   animation: fadeIn .6s .5s linear forwards;
   font-family: 'GT-Walsheim';
+
+  .temp-mobile-holder {
+    display: none;
+  }
 }
 
 // for top banner
@@ -141,6 +151,16 @@ export default {
         }
       }
     }
+  }
+}
+
+@media (max-width: $laptop-breakpoint) {
+  .desktop-container {
+    display: none;
+  }
+
+  .temp-mobile-holder {
+    display: block!important;
   }
 }
 
