@@ -38,14 +38,18 @@ module Gallery
 
     # Sync image server data with my server data
     def syncData(categories)
-      addMissingCategory(categories)
-      removeDeletedCategory(categories)
+      currentCategories = Category.all
+      addMissingCategory(currentCategories, categories)
+      removeDeletedCategory(currentCategories, categories)
     end
 
     # Add missing Categories
-    def addMissingCategory(categories)
-      categories.each { |category| 
-        unless !Category.find_by(cname: category) then
+    def addMissingCategory(currentCategories, categories)
+      categoriesArray = Array.new(currentCategories.length) { |i|
+        currentCategories[i]["cname"]
+      }
+      categories.each { |category|
+        unless !categoriesArray.include?(category) then
           next
         end
         Category.create(cname: category)
@@ -53,8 +57,7 @@ module Gallery
     end
 
     # remove deleted categories
-    def removeDeletedCategory(categories)
-      currentCategories = Category.all
+    def removeDeletedCategory(currentCategories, categories)
       currentCategories.each { |category| 
         unless !categories.include?(category.cname) then
           next
