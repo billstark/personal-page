@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: billyang
+  api_key: '531912777286269'
+  api_secret: 15g1FISpNyELatc6XMrCYRBOlj8
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: billyang
+  api_key: '531912777286269'
+  api_secret: 15g1FISpNyELatc6XMrCYRBOlj8
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: billyang
+  api_key: '531912777286269'
+  api_secret: 15g1FISpNyELatc6XMrCYRBOlj8
+  enhance_image_tag: true
+  static_image_support: false
