@@ -1,17 +1,25 @@
 module Gallery
   class CategoriesController < ApplicationController
 
+    ID_KEY = "id"
+    CATEGORY_NAME_KEY = "cname"
+    NAME_KEY = "name"
+    FOLDERS_KEY = "folders"
+
     include Response
     
+    # Before getting all the categories, 
+    # sync the categories with image server first
     before_action :sync, only: [:index]
     
+    # GET /gallery/categories
     def index
       @categories = Category.all
       response = Array.new
       @categories.each { |category|
-        response.push({ "id" => category["id"], "cname" => category["cname"] })
+        response.push({ ID_KEY => category[ID_KEY], CATEGORY_NAME_KEY => category[CATEGORY_NAME_KEY] })
       }
-      json_response(response)
+      jsonResponse(response)
     end
 
     ###################
@@ -27,10 +35,10 @@ module Gallery
 
     # Get all categories in the image server
     def getCategories
-      folders = Cloudinary::Api.root_folders["folders"]
+      folders = Cloudinary::Api.root_folders[FOLDERS_KEY]
       categories = Array.new
       folders.each { |folder|
-        categories.push(folder["name"])
+        categories.push(folder[NAME_KEY])
       }
 
       return categories
@@ -46,7 +54,7 @@ module Gallery
     # Add missing Categories
     def addMissingCategory(currentCategories, categories)
       categoriesArray = Array.new(currentCategories.length) { |i|
-        currentCategories[i]["cname"]
+        currentCategories[i][CATEGORY_NAME_KEY]
       }
       categories.each { |category|
         unless !categoriesArray.include?(category) then
