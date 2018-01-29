@@ -1,3 +1,5 @@
+@import 'variable.scss';
+
 .full-height-container {
   height: 100vh;
   width: 100%;
@@ -20,5 +22,19 @@
   .container {
     max-width: 1024px;
     width: 100%;
+  }
+}
+
+.temp-mobile-holder {
+  display: none;
+}
+
+@media (max-width: $laptop-breakpoint) {
+  .desktop-container {
+    display: none;
+  }
+
+  .temp-mobile-holder {
+    display: block!important;
   }
 }

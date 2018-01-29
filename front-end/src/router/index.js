@@ -2,9 +2,10 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Meta from 'vue-meta'
 import VueParticles from 'vue-particles'
-import Hello from '@/components/Hello'
 import Welcome from '@/components/Welcome'
 import About from '@/components/about/About'
+import Gallery from '@/components/gallery/Gallery'
+import Main from '@/components/Main'
 import Test from '@/components/Test'
 
 Vue.use(Router)
@@ -19,9 +20,19 @@ export default new Router({
       component: Welcome
     },
     {
-      path: '/about',
-      name: 'Introduction',
-      component: About
+      path: '/main',
+      name: 'Main',
+      component: Main,
+      children: [
+        {
+          path: 'about',
+          component: About
+        },
+        {
+          path: 'gallery',
+          component: Gallery
+        }
+      ]
     },
     {
       path: '/test',

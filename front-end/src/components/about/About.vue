@@ -1,42 +1,34 @@
 <template lang="html">
-  <div class="container">
-    <div class="desktop-container">
-      <heade></heade>
-      <!-- top banner  -->
-      <div class="top-banner full-height-container">
-        <div class="banner-content container">
-          <h1>YANG ZHUOHAN</h1>
-          <h4>Software Engineer & Designer</h4>
-          <a class="download-resume" 
-             href="https://www.dropbox.com/s/r49vsty8d32ej77/Yang%20Zhuohan%20CV.pdf?dl=0"
-             target="_blank">
-            <div class="download-button">
-              resume.download
-            </div>
-          </a>
-        </div>
+  <div>
+    <!-- top banner  -->
+    <div class="top-banner full-height-container">
+      <div class="banner-content container">
+        <h1>YANG ZHUOHAN</h1>
+        <h4>Software Engineer & Designer</h4>
+        <a class="download-resume" 
+           href="https://www.dropbox.com/s/r49vsty8d32ej77/Yang%20Zhuohan%20CV.pdf?dl=0"
+           target="_blank">
+          <div class="download-button">
+            resume.download
+          </div>
+        </a>
       </div>
+    </div>
 
-      <short-intro></short-intro>
-      <abilities></abilities>
-      <experiences></experiences>
-      <contact></contact>
-      <foote></foote>
-    </div>
-    <div class="temp-mobile-holder">
-      <mholder></mholder>
-    </div>
+    <short-intro></short-intro>
+    <abilities></abilities>
+    <experiences></experiences>
+    <contact></contact>
+    <foote></foote>
   </div>
 </template>
 
 <script>
-import Heade from './../common/Header';
-import Foote from './../common/footer';
 import ShortIntro from './parts/ShortIntro';
 import Abilities from './parts/Abilities';
 import Experiences from './parts/Experiences';
 import Contact from './parts/Contact';
-import Mholder from './../common/mholder';
+import Foote from './../common/footer';
 
 export default {
   data() {
@@ -48,13 +40,11 @@ export default {
   attached() {},
   methods: {},
   components: {
-    Heade,
-    Foote,
     ShortIntro,
     Abilities,
     Experiences,
     Contact,
-    Mholder
+    Foote
   },
   metaInfo: {
     title: "World In Square - About"
@@ -71,10 +61,6 @@ export default {
   opacity: 0;
   animation: fadeIn .6s .5s linear forwards;
   font-family: 'GT-Walsheim';
-
-  .temp-mobile-holder {
-    display: none;
-  }
 }
 
 // for top banner
@@ -114,7 +100,7 @@ export default {
     flex-direction: column;
     color: $paper;
     opacity: 0;
-    animation: floatDown 1s 2.5s linear forwards;
+    // animation: floatDown 1s 2.5s linear forwards;
 
     h1 {
       margin-bottom: 0px;
@@ -156,16 +142,6 @@ export default {
         }
       }
     }
-  }
-}
-
-@media (max-width: $laptop-breakpoint) {
-  .desktop-container {
-    display: none;
-  }
-
-  .temp-mobile-holder {
-    display: block!important;
   }
 }
 

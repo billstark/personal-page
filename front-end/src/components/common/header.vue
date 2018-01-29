@@ -16,10 +16,14 @@
       <div class="header-items">
         <div class="item-list">
           <ul>
-            <li class="active">about</li>
+            <li v-bind:class="{ active: currentPath == '/main/about' }">
+              <router-link :to="{ path: '/main/about' }">about</router-link>
+            </li>
             <li>projects</li>
             <li>thoughts</li>
-            <li>gallery</li>
+            <li v-bind:class="{ active: currentPath == '/main/gallery' }"> 
+              <router-link :to="{ path: '/main/gallery' }">gallery</router-link>
+            </li>
           </ul>
         </div>
       </div>
@@ -36,6 +40,11 @@ export default {
       title: "About",
       mainPath: "/"
     };
+  },
+  computed: {
+    currentPath() {
+      return this.$route.path;
+    }
   },
   components: {
     Cube
@@ -68,7 +77,7 @@ export default {
   flex-direction: row;
   justify-content: center;
   opacity: 0;
-  animation: floatDown 1s 1.5s linear forwards;
+  animation: floatDown 1s linear forwards;
   box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
 
   .header {
@@ -113,6 +122,10 @@ export default {
         color: $choco;
         cursor: pointer;
         padding-bottom: 10px;
+        a {
+          text-decoration: none;
+          color: $choco;
+        }
         &:hover {
           color: $oxblood;
           border-bottom: 3px solid $oxblood;
