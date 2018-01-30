@@ -6,7 +6,9 @@ module Gallery
     URL_KEY = "url"
     IMAGE_NAME_KEY = "iname"
     RESOURCES_KEY = "resources"
-    PRODUCT_ID_KEY = "product_id"
+    PUBLIC_ID_KEY = "public_id"
+    CATEGORY_KEY = "category"
+    IMAGES_KEY = "images"
     SLASH = "/"
 
     include Response
@@ -19,21 +21,24 @@ module Gallery
 
     # GET /gallery/categories/:category_id/images
     def index
-      response = Array.new
+      categorizedImages = Array.new
       unless @category.present? then
-        jsonResponse(response)
+        jsonResponse({})
         return
       end
 
-      @images = @category.images 
+      @images = @category.images
       @images.each { |image|
-        response.push({
+        categorizedImages.push({
             ID_KEY => image[ID_KEY],
             IMAGE_NAME_KEY => image[IMAGE_NAME_KEY],
             URL_KEY => image[URL_KEY]
           })
       }
-      jsonResponse(response)
+      jsonResponse({
+          CATEGORY_KEY => @category.cname,
+          IMAGES_KEY => categorizedImages
+        })
     end
 
     # GET /gallery/categories/:category_id/images/:id
@@ -51,6 +56,7 @@ module Gallery
       end
 
       response = {
+        CATEGORY_KEY => @category.cname,
         ID_KEY => @image.id,
         IMAGE_NAME_KEY => @image.iname,
         URL_KEY => @image.url
@@ -85,7 +91,7 @@ module Gallery
     # 1. add missing images
     # 2. remove deleted images
     def syncData(images)
-      currentImages = Image.all
+      currentImages = @category.images
       addMissingImages(currentImages, images)
       removeDeletedImages(currentImages, images)
     end
@@ -99,7 +105,7 @@ module Gallery
         unless !urlArray.include?(image[URL_KEY]) then
           next
         end
-        imageName = image[PRODUCT_ID_KEY]
+        imageName = image[PUBLIC_ID_KEY]
         imageName.slice! (@category.cname + SLASH)
         Image.create(iname: imageName, url: image[URL_KEY], category: @category)
       }

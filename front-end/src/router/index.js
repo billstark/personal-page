@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import Resource from 'vue-resource'
 import Meta from 'vue-meta'
 import VueParticles from 'vue-particles'
 import Welcome from '@/components/Welcome'
@@ -11,6 +12,7 @@ import Test from '@/components/Test'
 Vue.use(Router)
 Vue.use(Meta)
 Vue.use(VueParticles)
+Vue.use(Resource)
 
 export default new Router({
   routes: [
